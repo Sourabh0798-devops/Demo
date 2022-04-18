@@ -19,8 +19,9 @@ jobs:
        with:
     # Repository namespace
         repository: ${{ github.event.repository.full_name }}
-        ref: develop
+        ref: ${{ github.event.ref }}
         token: ${{ secrets.GITHUB_TOKEN }}
+        
               
      - name: Install SFDX CLI
        run: |
